@@ -10,7 +10,7 @@ import os
     
 warnings.filterwarnings("ignore", category=UserWarning, module='bs4')
 
-subs = ["CS", "CH", "HS", "MA", "PH", "IC"]
+subs = ["CS", "CH", "HS", "MA", "PH", "IC"] # enter your subject code here
 counter = 0
 
 driver = wb.Chrome()
@@ -54,7 +54,7 @@ for sub in subjects:
 
 while(True):
     for ii in links:
-        if (counter == 6):
+        if (counter == 6): #counter should be initialzed with the interger value equal to the number of subjects.
             time.sleep(300)
             counter = 0
         driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL+'t')
